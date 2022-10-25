@@ -1,4 +1,4 @@
-.form {
+.formSubmit {
   display: flex;
   justify-content: space-around;
 }
@@ -6,7 +6,7 @@
 .input {
   width: 80%;
 }
-.font {
+.fontLabel {
   font-size: 20 px;
   text-aligh: right;
 }
