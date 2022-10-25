@@ -6,6 +6,7 @@ import GlutenFree from "./components/Baking/GlutenFree";
 import WheatBased from "./components/Baking/WheatBased";
 import Skills from "./components/Skills";
 import ImageSearch from "./components/ImageSearch";
+import Calculator from "./components/Calculator";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/baking/gluten-free" component={GlutenFree} />
           <Route path="/image-search" component={ImageSearch} />
           <Route path="/" exact component={Skills} />
+          <Route path="/calculator" component={Calculator} />
         </BrowserRouter>
       </div>
     </div>
