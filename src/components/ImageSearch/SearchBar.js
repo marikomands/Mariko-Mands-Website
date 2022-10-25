@@ -12,9 +12,9 @@ const SearchBar = ({ onSubmit }) => {
   };
 
   return (
-    <div className="container">
-      <form className="form" onSubmit={onFormSubmit}>
-        <label className="font">Image Search</label>
+    <div className="containerWrapper">
+      <form className="formSubmit" onSubmit={onFormSubmit}>
+        <label className="fontLabel">Image Search</label>
         <input
           className="input"
           value={term}
