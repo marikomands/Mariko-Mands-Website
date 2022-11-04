@@ -1,0 +1,6 @@
+.headerApp {
+  color: black;
+  font-family: "serif", italic;
+  display: flex;
+  justify-content: center;
+}
