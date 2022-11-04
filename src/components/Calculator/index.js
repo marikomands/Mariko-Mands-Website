@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Calculator.css";
+import { Link } from "react-router-dom";
 
 function App() {
   console.log("%%%%%% STATE %%%%%%%");
@@ -202,85 +203,90 @@ function App() {
   };
 
   return (
-    <div className="calc-app">
-      <div className="inputContainer">
-        <input className="CalcInput" type="text" value={displayNumber} />
+    <div className="calcContainer">
+      <div className="calc-app">
+        <div className="inputContainer">
+          <input className="CalcInput" type="text" value={displayNumber} />
+        </div>
+        <div className="container">
+          <button className="button-light-gray" onClick={handleAllClear}>
+            AC
+          </button>
+          <button className="button-light-gray" onClick={handlePlusMinus}>
+            +/-
+          </button>
+          <button className="button-light-gray" onClick={handlePercentage}>
+            %
+          </button>
+          <button
+            className="button-orange"
+            onClick={() => handleActionClick("divide")}
+          >
+            /
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(7)}>
+            7
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(8)}>
+            8
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(9)}>
+            9
+          </button>
+          <button
+            className="button-orange"
+            onClick={() => handleActionClick("times")}
+          >
+            ×
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(4)}>
+            4
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(5)}>
+            5
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(6)}>
+            6
+          </button>
+          <button
+            className="button-orange"
+            onClick={() => handleActionClick("minus")}
+          >
+            -
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(1)}>
+            1
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(2)}>
+            2
+          </button>
+          <button className="digits" onClick={() => handleNumberClick(3)}>
+            3
+          </button>
+          <button
+            className="button-orange"
+            onClick={() => handleActionClick("add")}
+          >
+            +
+          </button>
+          <button className="zero" onClick={() => handleNumberClick(0)}>
+            0
+          </button>
+          <button className="del" onClick={() => handleDeleteClick()}>
+            DEL
+          </button>
+          <button name="." className="dot" onClick={() => handleDecimalClick()}>
+            .
+          </button>
+          <button
+            className="button-orange equal"
+            onClick={handleCalculate}
+          ></button>
+        </div>
       </div>
-      <div className="container">
-        <button className="button-light-gray" onClick={handleAllClear}>
-          AC
-        </button>
-        <button className="button-light-gray" onClick={handlePlusMinus}>
-          +/-
-        </button>
-        <button className="button-light-gray" onClick={handlePercentage}>
-          %
-        </button>
-        <button
-          className="button-orange"
-          onClick={() => handleActionClick("divide")}
-        >
-          /
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(7)}>
-          7
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(8)}>
-          8
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(9)}>
-          9
-        </button>
-        <button
-          className="button-orange"
-          onClick={() => handleActionClick("times")}
-        >
-          ×
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(4)}>
-          4
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(5)}>
-          5
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(6)}>
-          6
-        </button>
-        <button
-          className="button-orange"
-          onClick={() => handleActionClick("minus")}
-        >
-          -
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(1)}>
-          1
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(2)}>
-          2
-        </button>
-        <button className="digits" onClick={() => handleNumberClick(3)}>
-          3
-        </button>
-        <button
-          className="button-orange"
-          onClick={() => handleActionClick("add")}
-        >
-          +
-        </button>
-        <button className="zero" onClick={() => handleNumberClick(0)}>
-          0
-        </button>
-        <button className="del" onClick={() => handleDeleteClick()}>
-          DEL
-        </button>
-        <button name="." className="dot" onClick={() => handleDecimalClick()}>
-          .
-        </button>
-        <button className="button-orange equal" onClick={handleCalculate}>
-          {" "}
-          ={" "}
-        </button>
-      </div>
+      <Link to="/" className="CalcLink">
+        Home
+      </Link>
     </div>
   );
 }
