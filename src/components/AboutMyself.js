@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./AboutMyself.css";
 
 const AboutMyself = () => {
   return (
@@ -13,6 +15,11 @@ const AboutMyself = () => {
         life. Then, moved to Nanjing China to find a another new life. We are
         blessed with wonderful 2 children now.
       </p>
+      <div className="myselfContainer">
+        <Link to="/" style={{ textDecoration: "underline" }}>
+          Home
+        </Link>
+      </div>
     </div>
   );
 };
