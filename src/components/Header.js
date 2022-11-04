@@ -5,11 +5,15 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="header">
-      <Link to="/image-search">My Work with Hooks (Search Image App.)</Link>
-      <a href="https://github.com/marikomands" target="_blank">
+      <Link className="link" to="/image-search">
+        My Work with Hooks (Search Image App.)
+      </Link>
+      <a className="link" href="https://github.com/marikomands" target="_blank">
         My Github
       </a>
-      <Link to="/calculator">React Calculator</Link>
+      <Link className="link" to="/calculator">
+        React Calculator
+      </Link>
     </div>
   );
 };
