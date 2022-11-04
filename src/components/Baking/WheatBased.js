@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./WheatBased.css";
 
 const WheatBased = () => {
   return (
@@ -15,7 +16,12 @@ const WheatBased = () => {
         sometimes make gluten-free muffins and bread which you can find more
         about it in the following link!
       </p>
-      <Link to="/baking/gluten-free">Gluten Free Baking</Link>
+      <div className="linkContainer">
+        <Link to="/baking/gluten-free">Gluten Free Baking</Link>
+        <Link to="/" style={{ textDecoration: "underline" }}>
+          Home
+        </Link>
+      </div>
     </div>
   );
 };
