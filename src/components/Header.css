@@ -1,4 +1,13 @@
 .header {
   display: flex;
   gap: 10px;
+  background-color: #af6930d5;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
