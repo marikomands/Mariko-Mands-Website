@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
+import "./index.css";
 
 const ImageSearch = () => {
   const [results, setResults] = useState([]);
@@ -46,12 +48,21 @@ const ImageSearch = () => {
 
   return (
     <div>
-      <SearchBar onSubmit={setSearchTerm} />
-      {/* <SearchBar onSubmit={fetchImages} /> */}
-      {error ? <div>Something went wrong!</div> : null}
-      {results?.length === 0 ? <div>No Results!</div> : null}
-      {results?.length > 0 ? <div>{results.length} Results!</div> : null}
-      <ImageList images={results} />
+      <div>
+        <SearchBar onSubmit={setSearchTerm} />
+        {/* <SearchBar onSubmit={fetchImages} /> */}
+        {error ? <div>Something went wrong!</div> : null}
+        <div style={{ marginTop: "50px" }}>
+          {results?.length === 0 ? <div>No Results!</div> : null}
+        </div>
+        {results?.length > 0 ? <div>{results.length} Results!</div> : null}
+        <ImageList images={results} />
+      </div>
+      <div className="imageContainer">
+        <Link to="/" style={{ textDecoration: "underline" }}>
+          Home
+        </Link>
+      </div>
     </div>
   );
 };
