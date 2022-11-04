@@ -18,7 +18,9 @@
 
 input.CalcInput {
   width: 100%;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
   /* margin-top: auto; */
   text-align: right;
   /* height: 16px; */
@@ -100,4 +102,17 @@ button:hover {
   border-bottom-right-radius: 19px;
   padding: 0;
   border-bottom: none;
+}
+
+.calcContainer {
+  display: flex;
+  height: 350px;
+}
+
+.CalcLink {
+  text-decoration: underline;
+  margin-left: 50px;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-bottom: 30px;
 }
