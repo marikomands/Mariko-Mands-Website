@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./GlutenFree.css";
 
 const GlutenFree = () => {
   return (
@@ -18,6 +20,11 @@ const GlutenFree = () => {
         hard, so it might be why we tend not to use it in Japan as many Japanese
         people like fluffy bread.
       </p>
+      <div className="freeContainer">
+        <Link to="/" style={{ textDecoration: "underline" }}>
+          Home
+        </Link>
+      </div>
     </div>
   );
 };
