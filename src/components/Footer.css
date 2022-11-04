@@ -1,4 +1,8 @@
 .containerFooter {
   display: flex;
-  gap: 10px;
+  gap: 50px;
+  background-color: rgba(175, 105, 48, 0.836);
+  height: 50px;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
