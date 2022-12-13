@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css";
+import "../App.css";
 
 const ClothesItem = ({ item }) => {
   const [imageSrc, setImageSrc] = useState(null);
